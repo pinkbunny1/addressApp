@@ -1,0 +1,31 @@
+{
+    "private": true,
+    "dependencies": {
+        "jest": "^23.6.0",
+        "react": "^16.4.0",
+        "react-dom": "^16.4.0",
+        "react-redux": "^5.0.7",
+        "react-router-dom": "^4.3.1",
+        "react-scripts": "1.1.4",
+        "redux": "^4.0.0",
+        "uuid": "^3.3.2"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "NODE_ENV=development mocha --compilers js:babel-core/register src/test/*.test.js",
+        "eject": "react-scripts eject"
+    },
+    "babel": {
+        "presets": [
+            "react-app"
+        ],
+        "plugins": [
+            "transform-es2015-modules-commonjs"
+        ]
+    },
+    "devDependencies": {
+        "expect": "^23.6.0",
+        "mocha": "^5.2.0"
+    }
+}

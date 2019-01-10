@@ -1,0 +1,7 @@
+.addressForm > div {
+    padding: 5% 0;
+}
+
+.addressForm > :last-child {
+    float: right;
+}

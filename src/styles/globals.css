@@ -1,0 +1,20 @@
+body {
+    background-color: #ebeced;
+    font-family: 'Haas Grot Text R Web', 'Helvetica Neue', Helvetica, Arial,
+        sans-serif;
+}
+
+.address {
+    display: flex;
+}
+
+input:focus,
+input:active,
+button:active {
+    outline: none;
+}
+
+button:active {
+    background-color: #dcdcdc;
+    border-radius: 5px;
+}
