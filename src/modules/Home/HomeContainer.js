@@ -6,8 +6,8 @@ import EntryList from './EntryList';
 const mapStateToProps = state => (
 	console.log('home', state),
 	{
-		// entries: getVisibleEntries([...state.add, ...state.edit], state.filter),
-		entries: getVisibleEntries(state.addressbook, state.addressfilter),
+		entries: getVisibleEntries([...state.add, ...state.edit], state.filter), // FF reducer
+		// entries: getVisibleEntries(state.addressbook, state.addressfilter), // oldReducer
 	}
 );
 

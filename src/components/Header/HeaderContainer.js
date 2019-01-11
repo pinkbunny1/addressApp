@@ -4,8 +4,8 @@ import { text_filter } from './actions';
 import Header from './Header';
 
 const mapStateToProps = state => ({
-	// filter: state.filter,
-	filter: state.addressfilter,
+	filter: state.filter, //feature-first reducer
+	// filter: state.addressfilter, //oldReducer
 });
 
 const mapDispatchToProps = dispatch => ({

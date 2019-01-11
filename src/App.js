@@ -2,17 +2,17 @@ import React from 'react';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import * as reducers from './oldReducers';
-// import rootReducer from './reducers.js';
+// import * as reducers from './oldReducers';// oldReducer
+import rootReducer from './reducers.js'; // FF reducer
 import AppRouter from './router/AppRouter';
 
 import { createEntry } from './modules/Add/actions';
 
 import './styles/style.css';
 
-// const store = createStore(rootReducer);
+const store = createStore(rootReducer); //FF reducer
 
-const store = createStore(combineReducers(reducers));
+// const store = createStore(combineReducers(reducers));// oldReducer
 
 // creating starting data
 store.dispatch(
