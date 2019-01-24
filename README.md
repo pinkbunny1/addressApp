@@ -24,15 +24,15 @@ In order to convert existing react app to Typesciprt, it requires 2 changes:
 
 ### 1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
 1. Install dependencies:
-    `$ npm install --save-dev typescript awesome-typescript-loader source-map-loader` 
-        - awesome-typescript-loader : webpack plugin to compile ts into js (like babel loader for babel)
-        - source-map-loader : adds source map support for debugging
-    `$ npm install --save @types/react @types/react-dom`
-        - install type declaration files (.d.ts files) from @types for any library in use.
+    ⋅⋅⋅`$ npm install --save-dev typescript awesome-typescript-loader source-map-loader` 
+        ⋅⋅⋅* awesome-typescript-loader : webpack plugin to compile ts into js (like babel loader for babel)
+        ⋅⋅⋅* source-map-loader : adds source map support for debugging
+    ⋅⋅⋅`$ npm install --save @types/react @types/react-dom`
+        ⋅⋅⋅* install type declaration files (.d.ts files) from @types for any library in use.
 
 2. Configure TypeScript
-    Create a typescript config file to configure TypesScript (tsconfig.json in the root folder of the app)
-    ```bash
+    ⋅⋅⋅Create a typescript config file to configure TypesScript (tsconfig.json in the root folder of the app)
+    ```javascript
     <!-- tsconfig.json file -->
     {
         "compilerOptions": {
@@ -48,15 +48,16 @@ In order to convert existing react app to Typesciprt, it requires 2 changes:
             "include": [
                 "./src/"                // where ts files that needs to be compiled to js reside
             ]
-    }```
+    }
+    ```
 
 3. Setup Build pipeline
-        1. Modify webpack.config.js file in order to add TypeScript compilation as a part of build process. Required changes are:
-            1. To handle .ts & .tsx files
-            2. Replace loader from babel-loader to awesome-typescript-loader
-            3. Add source-map-loader
-            4. Modify entry file from App.js to App.ts [optional]
-            ```bash
+        ⋅⋅⋅1. Modify webpack.config.js file in order to add TypeScript compilation as a part of build process. Required changes are:
+            ⋅⋅⋅1. To handle .ts & .tsx files
+            ⋅⋅⋅2. Replace loader from babel-loader to awesome-typescript-loader
+            ⋅⋅⋅3. Add source-map-loader
+            ⋅⋅⋅4. Modify entry file from App.js to App.ts [optional]
+            ```javascript
                <!-- webpack.config.js file -->
                module.exports = {
                     // change to .tsx if necessary
@@ -82,9 +83,10 @@ In order to convert existing react app to Typesciprt, it requires 2 changes:
                     },
                     // addition - add source-map support
                     devtool: "source-map"
-                }```
-        2. Delete .babelrc and other Babel dependencies from package.json
-        3. Above actions correctly set up build pipeline with TypeScript for handling transpilation. Build the app with this command --> `$ npx webpack` (installation of npx is required `$ npm install -g npx`)
+                }
+            ```
+        ⋅⋅⋅2. Delete .babelrc and other Babel dependencies from package.json
+        ⋅⋅⋅3. Above actions correctly set up build pipeline with TypeScript for handling transpilation. Build the app with this command --> `$ npx webpack` (installation of npx is required `$ npm install -g npx`)
 ### 2. Change JS --> TS files
     1. Min conversion
         1. Change `.js —> .ts` or `.jsx --> .tsx` extensions in files
