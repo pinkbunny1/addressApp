@@ -53,44 +53,44 @@ In order to convert existing react app to Typesciprt, it requires 2 changes:
     ```
 
 3. Setup Build pipeline
-1. Modify webpack.config.js file in order to add TypeScript compilation as a part of build process. Required changes are:
-  1. To handle .ts & .tsx files
-  2. Replace loader from babel-loader to awesome-typescript-loader
-  3. Add source-map-loader
-  4. Modify entry file from App.js to App.ts [optional].   
+  1. Modify webpack.config.js file in order to add TypeScript compilation as a part of build process. Required changes are:
+    1. To handle .ts & .tsx files
+    2. Replace loader from babel-loader to awesome-typescript-loader
+    3. Add source-map-loader
+    4. Modify entry file from App.js to App.ts [optional].   
     ```javascript
-        <!-- webpack.config.js file -->
-        module.exports = {
-            // change to .tsx if necessary
-            entry: './src/app.jsx',
-            output: {
-                filename: './dist/bundle.js'
-            },
-            resolve: {
-                // changed from extensions: [".js", ".jsx"]
-                extensions: [".ts", ".tsx", ".js", ".jsx"]
-            },
-            module: {
-                rules: [
-                // changed from { test: /\.jsx?$/, use: { loader: 'babel-loader' } },
-                { test: /\.(t|j)sx?$/, use: { loader: 'awesome-typescript-loader' } },
-                // addition - add source-map support
-                { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
-                ]
-            },
-            externals: {
-                "react": "React",
-                "react-dom": "ReactDOM",
-            },
+    <!-- webpack.config.js file -->
+    module.exports = {
+        // change to .tsx if necessary
+        entry: './src/app.jsx',
+        output: {
+            filename: './dist/bundle.js'
+        },
+        resolve: {
+            // changed from extensions: [".js", ".jsx"]
+            extensions: [".ts", ".tsx", ".js", ".jsx"]
+        },
+        module: {
+            rules: [
+            // changed from { test: /\.jsx?$/, use: { loader: 'babel-loader' } },
+            { test: /\.(t|j)sx?$/, use: { loader: 'awesome-typescript-loader' } },
             // addition - add source-map support
-            devtool: "source-map"
-        }
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            ]
+        },
+        externals: {
+            "react": "React",
+            "react-dom": "ReactDOM",
+        },
+        // addition - add source-map support
+        devtool: "source-map"
+    }
     ```
 2. Delete .babelrc and other Babel dependencies from package.json
 3. Above actions correctly set up build pipeline with TypeScript for handling transpilation. Build the app with this command --> `$ npx webpack` (installation of npx is required `$ npm install -g npx`)
 ### 2. Change JS --> TS files
 1. Min conversion
-  1. Change `.js —> .ts` or `.jsx --> .tsx` extensions in files
+   1. Change `.js —> .ts` or `.jsx --> .tsx` extensions in files
   2. Import React from react —> `import * as React from react`
   3. Add types to class declararion of `React.Component` by the end of `eract.Component<any, any>`. <property type, state type>      
 2. Add types
