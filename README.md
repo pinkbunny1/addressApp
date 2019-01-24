@@ -53,11 +53,12 @@ In order to convert existing react app to Typesciprt, it requires 2 changes:
     ```
 
 3. Setup Build pipeline
-  1. Modify webpack.config.js file in order to add TypeScript compilation as a part of build process. Required changes are:
-    1. To handle .ts & .tsx files
-    2. Replace loader from babel-loader to awesome-typescript-loader
-    3. Add source-map-loader
-    4. Modify entry file from App.js to App.ts [optional].   
+   1. Modify webpack.config.js file in order to add TypeScript compilation as a part of build process. Required changes are:
+     1. To handle .ts & .tsx files
+     2. Replace loader from babel-loader to awesome-typescript-loader
+     3. Add source-map-loader
+     4. Modify entry file from App.js to App.ts [optional].  
+      
     ```javascript
     <!-- webpack.config.js file -->
     module.exports = {
