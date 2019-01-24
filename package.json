@@ -1,8 +1,6 @@
 {
   "private": true,
   "dependencies": {
-    "@types/react": "^16.7.20",
-    "@types/react-dom": "^16.0.11",
     "jest": "^23.6.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
