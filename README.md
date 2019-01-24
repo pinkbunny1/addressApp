@@ -19,9 +19,9 @@ In hope to learn and be more comfortable with TypeScripts and DUCKs redux file s
 
 ## How to add Typescript to existing React App
 If you have CRA (react-scripts@2.1.0 or higher):  
-   `$npm install --save typescript @types/node @types/react @types/react-dom @types/jest`  
-   or   
-   `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`  
+    `$npm install --save typescript @types/node @types/react @types/react-dom @types/jest`  
+    or   
+    `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`  
 
 OR
 
