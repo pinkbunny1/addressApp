@@ -12,7 +12,6 @@ import './styles/style.css';
 
 const store = createStore(rootReducer); //FF reducer
 
-// const store = createStore(combineReducers(reducers));// oldReducer
 
 // creating starting data
 store.dispatch(

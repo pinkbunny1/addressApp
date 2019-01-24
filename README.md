@@ -19,7 +19,7 @@ In hope to learn and be more comfortable with TypeScripts and DUCKs redux file s
 
 ## To do
 - [ ] Add TypeScripts
-- [ ] Change from functionality-first to feature-first
-- [ ] Separate one file into Container and Presentational Component
-- [ ] Apply DUCKs for Redux
+- [x] Change from functionality-first to feature-first
+- [x] Separate one file into Container and Presentational Component
+- [x] Apply DUCKs for Redux
 - [ ] Add optimisation
