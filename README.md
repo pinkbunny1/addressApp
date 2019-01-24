@@ -42,6 +42,7 @@ In order to convert existing react app to Typesciprt, it requires 2 changes:
 
 OR  
 [MS guide source](https://github.com/Microsoft/TypeScript-React-Conversion-Guide)
+
    `$ npm install --save-dev typescript awesome-typescript-loader source-map-loader`
      - awesome-typescript-loader : webpack plugin to compile ts into js (like babel loader for babel)
      - source-map-loader : adds source map support for debugging
