@@ -18,17 +18,18 @@ In hope to learn and be more comfortable with TypeScripts and DUCKs redux file s
 ```
 
 ## How to add Typescript to existing React App 
-[Source](https://github.com/Microsoft/TypeScript-React-Conversion-Guide)
 
 In order to convert existing react app to Typesciprt, it requires 2 changes:
  1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
  2. Change JS --> TS files
 
 ### 1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
-[source](https://facebook.github.io/create-react-app/docs/adding-typescript)
+
 
 1. Install dependencies:  
-If you have CRA (react-scripts@2.1.0 or higher):   
+
+**If you have CRA (react-scripts@2.1.0 or higher):**
+[Facebook Guide source](https://facebook.github.io/create-react-app/docs/adding-typescript)
 ```bash
 $ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
 or   
@@ -40,6 +41,7 @@ $ npm install --save typescript @types/node @types/react @types/react-dom @types
 
 
 OR
+[MS guide source](https://github.com/Microsoft/TypeScript-React-Conversion-Guide)
 
    `$ npm install --save-dev typescript awesome-typescript-loader source-map-loader`
      - awesome-typescript-loader : webpack plugin to compile ts into js (like babel loader for babel)
@@ -60,11 +62,12 @@ OR
             "module": "es6",            // specify module code generation
             "jsx": "react",             // use typescript to transpile jsx to js
             "target": "es5",            // specify ECMAScript target version
-            "allowJs": true             // allow a partial TypeScript and JavaScript codebase
+            "allowJs": true,             // allow a partial TypeScript and JavaScript codebase
+            "moduleResolution": "node"   // fixes csstype bug
 
             },
             "include": [
-                "./src/"                // where ts files that needs to be compiled to js reside
+                "./src/**/*"                // where ts files that needs to be compiled to js reside
             ]
     }
     ```
