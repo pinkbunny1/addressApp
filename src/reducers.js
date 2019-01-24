@@ -6,7 +6,7 @@ import { filterReducer } from './components/Header';
 
 const rootReducer = combineReducers({
 	add: addReducer,
-	edit: editReducer,
+	// edit: editReducer,
 	filter: filterReducer,
 });
 

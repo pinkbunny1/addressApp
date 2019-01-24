@@ -1,5 +1,5 @@
 import EditPage from './EditContainer';
-import editReducer from './reducer';
+// import editReducer from './reducer';
 
-export { editReducer };
+// export { editReducer };
 export default EditPage;
