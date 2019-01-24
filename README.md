@@ -24,11 +24,11 @@ In order to convert existing react app to Typesciprt, it requires 2 changes:
 
 ### 1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
 1. Install dependencies:
-⋅⋅⋅`$ npm install --save-dev typescript awesome-typescript-loader source-map-loader` 
-    ⋅⋅⋅* awesome-typescript-loader : webpack plugin to compile ts into js (like babel loader for babel)
-    ⋅⋅⋅* source-map-loader : adds source map support for debugging
-⋅⋅⋅`$ npm install --save @types/react @types/react-dom`
-    ⋅⋅⋅* install type declaration files (.d.ts files) from @types for any library in use.
+   `$ npm install --save-dev typescript awesome-typescript-loader source-map-loader`
+     - awesome-typescript-loader : webpack plugin to compile ts into js (like babel loader for babel)
+     - source-map-loader : adds source map support for debugging
+   `$ npm install --save @types/react @types/react-dom`
+   install type declaration files (.d.ts files) from @types for any library in use.
 
 2. Configure TypeScript
     ⋅⋅⋅Create a typescript config file to configure TypesScript (tsconfig.json in the root folder of the app)
