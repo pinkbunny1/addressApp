@@ -18,12 +18,13 @@ In hope to learn and be more comfortable with TypeScripts and DUCKs redux file s
 ```
 
 ## How to add Typescript to existing React App
-If you have CRA (react-scripts@2.1.0 or higher):
-   `$npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
-   or 
-   `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
+If you have CRA (react-scripts@2.1.0 or higher):  
+   `$npm install --save typescript @types/node @types/react @types/react-dom @types/jest`  
+   or   
+   `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`  
 
 OR
+
 In order to convert existing react app to Typesciprt, it requires 2 changes:
  1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
  2. Change JS --> TS files
