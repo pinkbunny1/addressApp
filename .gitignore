@@ -3,3 +3,4 @@ node_modules
 .elasticbeanstalk/
 package-lock.json
 .vscode
+npm-debug.log

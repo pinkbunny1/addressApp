@@ -17,23 +17,30 @@ In hope to learn and be more comfortable with TypeScripts and DUCKs redux file s
  (to test) npm test
 ```
 
-## How to add Typescript to existing React App
-If you have CRA (react-scripts@2.1.0 or higher):   
-```bash
-$ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
-or   
-$ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
-```
-
-OR
+## How to add Typescript to existing React App 
+[Source](https://github.com/Microsoft/TypeScript-React-Conversion-Guide)
 
 In order to convert existing react app to Typesciprt, it requires 2 changes:
  1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
  2. Change JS --> TS files
 
 ### 1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
-[Source](https://github.com/Microsoft/TypeScript-React-Conversion-Guide)
+[source](https://facebook.github.io/create-react-app/docs/adding-typescript)
+
 1. Install dependencies:  
+If you have CRA (react-scripts@2.1.0 or higher):   
+```bash
+$ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+or   
+$ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+```
+#### How to upgrade CRA(react-scripts@2.1.0) or higher
+1. Go to package.json and find `react-scripts:"...."`. If its version is lower than 2.1.0 then manually add "2.1.0" or higher.
+2. `$ npm install` to reinstall.
+
+
+OR
+
    `$ npm install --save-dev typescript awesome-typescript-loader source-map-loader`
      - awesome-typescript-loader : webpack plugin to compile ts into js (like babel loader for babel)
      - source-map-loader : adds source map support for debugging
