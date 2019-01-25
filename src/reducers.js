@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 
 import { addReducer } from './modules/Add';
-import { editReducer } from './modules/Edit';
 import { filterReducer } from './components/Header';
 
 const rootReducer = combineReducers({
-	add: addReducer,
+	add : addReducer,
 	// edit: editReducer, (combined edit and add reducer)
 	filter: filterReducer,
 });

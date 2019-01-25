@@ -1,16 +1,22 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",        // path to output directory
-        "sourceMap": true,          // allow sourcemap support
-        "strictNullChecks": true,   // enable strict null checks as a best practice
-        "module": "es6",            // specify module code generation
-        "jsx": "react",             // use typescript to transpile jsx to js
-        "target": "es5",            // specify ECMAScript target version
-        "allowJs": true,             // allow a partial TypeScript and JavaScript codebase
-        "moduleResolution": "node"   // fixes csstype bug
-
-        },
-        "include": [
-            "./src/**/*"                // where ts files that needs to be compiled to js reside
-        ]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "module": "esnext",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "strict": true
+  },
+  "include": [
+    "./src/**/*"
+  ]
 }

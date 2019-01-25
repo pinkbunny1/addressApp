@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -67,6 +67,7 @@ console.log(store.getState());
 
 class App extends React.Component {
 	render() {
+		console.log(1, AppRouter)
 		return (
 			<Provider store={store}>
 				<AppRouter />
