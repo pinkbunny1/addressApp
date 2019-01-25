@@ -62,17 +62,7 @@ store.dispatch(
 
 console.log(store.getState())
 
-class App extends React.Component {
-<<<<<<< HEAD
-	render() {
-		console.log(1, AppRouter)
-		return (
-			<Provider store={store}>
-				<AppRouter />
-			</Provider>
-		);
-	}
-=======
+class App extends React.Component<any, any> {
   render() {
     return (
       <Provider store={store}>
@@ -80,7 +70,6 @@ class App extends React.Component {
       </Provider>
     )
   }
->>>>>>> 3764c47c92d40da3eddac352b20b1deb6f90f5fd
 }
 
 export default App

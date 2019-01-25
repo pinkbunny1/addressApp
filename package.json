@@ -19,6 +19,7 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
+    "prestart": "tsc-watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "NODE_ENV=development mocha --compilers js:babel-core/register src/test/*.test.js",
