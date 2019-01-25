@@ -1,15 +1,17 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import getVisibleEntries from '../../selectors/addressBook';
-import EntryList from './EntryList';
+import { connect } from 'react-redux'
+import getVisibleEntries from '../../selectors/addressBook'
+import EntryList from './EntryList'
 
-const mapStateToProps = state => (
-	console.log('home', state),
-	{
-		// entries: getVisibleEntries([...state.add, ...state.edit], state.filter), // FF reducer
-		entries: getVisibleEntries(state.add, state.filter), // FF reducer (combined edit and add reducer)
-		// entries: getVisibleEntries(state.addressbook, state.addressfilter), // oldReducer
-	}
-);
+const mapStateToProps = state => {
+  const entries = state.add.map(entry => {
+    if (entry.id === state.edit.id) {
+      entry = state.edit
+    }
+    return entry
+  })
+  return {
+    entries: getVisibleEntries(entries, state.filter),
+  }
+}
 
-export default connect(mapStateToProps)(EntryList);
+export default connect(mapStateToProps)(EntryList)

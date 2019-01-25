@@ -2,19 +2,20 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
+    "strictNullChecks": true,
     "module": "esnext",
+    "jsx": "preserve",
     "target": "es5",
     "allowJs": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    "strict": true
+    "noEmit": true
   },
   "include": [
     "./src/**/*"

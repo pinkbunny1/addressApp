@@ -11,7 +11,6 @@ const AppRouter = () => (
 		<div>
 			<HeaderCompo />
 			<div className="address">
-				{/* <Route component={AddressBook} /> */}
 				<Route component={HomePage} />
 				<Switch>
 					<Route exact strict sensitive path="/create" component={AddPAge} />
