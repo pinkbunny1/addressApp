@@ -6,7 +6,7 @@ In hope to learn and be more comfortable with TypeScripts and DUCKs redux file s
 
 ## Pre-installations
 
--   create-react-app@1.5.2
+-   create-react-app@2.1.0
 -   node.js@8.11.0
 
 ## Installations
@@ -20,10 +20,10 @@ In hope to learn and be more comfortable with TypeScripts and DUCKs redux file s
 ## How to add Typescript to existing React App 
 
 In order to convert existing react app to Typesciprt, it requires 2 changes:
- 1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
+ 1. Add TypeSciprt Compiler (tsc) to building pipeline
  2. Change JS --> TS files
 
-### 1. Add TypeSciprt Compiler (tsc) to assembling part of pipeline
+### 1. Add TypeSciprt Compiler (tsc) to building pipeline
 
 
 1. Install dependencies:  
@@ -52,7 +52,7 @@ OR
    
      - installs type declaration files (.d.ts files) from @types for  any library in use.
 
-2. Configure TypeScript
+2. Configure TypeScript  
    Create a typescript config file to configure TypesScript (tsconfig.json in the root folder of the app)   
     ```javascript
     <!-- tsconfig.json file -->
