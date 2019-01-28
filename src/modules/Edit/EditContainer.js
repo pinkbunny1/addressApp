@@ -12,11 +12,16 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
+// const mapDispatchToProps = dispatch => ({
+//   editEntry: bindActionCreators(editEntry, dispatch),
+//   removeEntry: bindActionCreators(removeEntry, dispatch),
+//   dispatch,
+// })
+
 const mapDispatchToProps = dispatch => ({
-  editEntry: bindActionCreators(editEntry, dispatch),
-  removeEntry: bindActionCreators(removeEntry, dispatch),
-  dispatch,
-})
+	editEntry: (id, newEntry) => dispatch(editEntry(id, newEntry)),
+	removeEntry: id => dispatch(removeEntry(id)),
+});
 
 export default connect(
   mapStateToProps,
