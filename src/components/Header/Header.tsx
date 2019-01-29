@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = ({ filter, textFilter }) => {
-	const onSearchHandle = e => {
+type Props = {
+	filter: {
+		text: string
+	},
+	textFilter(text:string): void
+}
+
+const Header = ({ filter, textFilter }:Props) => {
+	const onSearchHandle = (e:any) => {
 		const text = e.target.value;
 		textFilter(text);
 	};
