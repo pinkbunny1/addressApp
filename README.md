@@ -127,7 +127,7 @@ OR
 
 
 ## To do
-- [x] Add TypeScripts [started...]
+- [x] Add TypeScripts [half way through...]
 - [x] Change from functionality-first to feature-first
 - [x] Separate one file into Container and Presentational Component
 - [x] Apply DUCKs for Redux
