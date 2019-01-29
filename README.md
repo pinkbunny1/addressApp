@@ -128,8 +128,11 @@ OR
 
 
 ## To do
-- [x] Add TypeScripts [half way through...]
+- [x] Add TypeScripts
 - [x] Change from functionality-first to feature-first
 - [x] Separate one file into Container and Presentational Component
 - [x] Apply DUCKs for Redux
+- [ ] Testing in Typescript
 - [ ] Add optimisation
+    - Code Splitting
+    - SSR
