@@ -1,6 +1,12 @@
 import { sortBy as _sortBy } from 'lodash'
+import Types from 'Types'
+import { EntryData } from '../modules/Add'
 
-const getVisibleEntries = (entries, { text }) => {
+interface FilterState {
+  text: string
+}
+
+const getVisibleEntries = (entries:EntryData[], { text }:FilterState) => {
   let filteredEntries = entries.filter(({ firstname, lastname }) => {
     const textMatch =
       firstname.toLowerCase().includes(text.toLowerCase()) ||

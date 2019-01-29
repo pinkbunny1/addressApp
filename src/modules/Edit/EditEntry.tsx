@@ -1,11 +1,21 @@
 import React from 'react';
 import AddressForm from '../../components/Form';
+import { EntryData } from '../Add'
 
-const Edit = props => {
+type Props = {
+	editEntry(id: string, newEntry: EntryData): void,
+	removeEntry(id:string): void,
+	lastname: string, 
+	firstname: string, 
+	history: object,
+	match: any
+}
+
+const Edit = (props:Props) => {
 	const { editEntry, removeEntry, lastname, firstname, history } = props;
 	const { id } = props.match.params;
 
-	const handleEditEntry = newEntry => {
+	const handleEditEntry = (newEntry:EntryData):void => {
 		editEntry(id, newEntry);
 	};
 

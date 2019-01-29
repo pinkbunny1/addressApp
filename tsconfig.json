@@ -15,9 +15,15 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "lib": [
+      "es7", "dom"
+    ],
   },
+  
   "include": [
-    "./src/**/*"
-  ]
+    "./src/**/*",
+    "typings/*"
+  ],
+  "exclude": ["node_modules"]
 }

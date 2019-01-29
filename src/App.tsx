@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 
-import configureStore from './reactStore'
+import configureStore from './store/reactStore'
 import AppRouter from './router/AppRouter'
 
 import { createEntry } from './modules/Add/actions'

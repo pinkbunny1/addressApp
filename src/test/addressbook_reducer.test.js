@@ -1,4 +1,4 @@
-import { addressbook } from '../reducers';
+import { addressbook } from '../store/reducers';
 import {
     createEntry,
     editEntry,

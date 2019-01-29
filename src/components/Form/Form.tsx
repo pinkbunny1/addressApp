@@ -1,6 +1,19 @@
 import React from 'react';
 
-class Form extends React.Component {
+type Props = {
+	firstname: string,
+	lastname: string,
+	onDelete(): void,
+	history: any,
+	onSubmit({firstname, lastname}:State): void,
+	btnName: string
+}
+
+type State = {
+	firstname:string,
+	lastname:string 
+}
+class Form extends React.Component<Props, State> {
 	// static propTypes = {
 	// }
 	//  why use static propTypes ????
@@ -10,7 +23,7 @@ class Form extends React.Component {
 		lastname: this.props.lastname ? this.props.lastname : '',
 	};
 
-	componentDidUpdate(prevProps) {
+	componentDidUpdate(prevProps:Props) {
 		const { firstname, lastname } = this.props;
 		if (prevProps.firstname !== firstname || prevProps.lastname !== lastname) {
 			this.setState({ firstname });
@@ -23,7 +36,7 @@ class Form extends React.Component {
 		this.props.history.push('/');
 	};
 
-	onFormSubmit = e => {
+	onFormSubmit = (e:any)=> {
 		e.preventDefault();
 		this.props.onSubmit({
 			firstname: this.state.firstname,
@@ -32,10 +45,10 @@ class Form extends React.Component {
 		this.props.history.push('/');
 	};
 
-	onNameChange = e => {
+	onNameChange = (e: any)=> {
 		const name = e.target.name;
 		const value = e.target.value;
-		this.setState({ [name]: value });
+		this.setState({ [name]: value } as any);
 	};
 
 	render() {
