@@ -13,6 +13,7 @@ In hope to learn and be more comfortable with TypeScripts and DUCKs redux file s
 
 ```bash
  npm install
+ npm run start:dev
  npm start
  (to test) npm test
 ```
